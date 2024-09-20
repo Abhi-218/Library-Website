@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  
+    <form action="index1.html" method="post" class="loginform" id="login-form" onsubmit="pas()">
+        <div><h1>akhand jyoti book store</h1></div>
+        <div>
+            <input type="text" pattern="[0-9]{10}" title="000 000 0000" name="phone number" maxlength="10" id="" placeholder=" phone number"   required>
+        </div>
+          <div>
+            <input type="password" name="pass-word" id="log-pass" placeholder="password" minlength="8" required>
+          </div>
+          <div>
+            <button class="loginbtn" id="login-btn">log in</button>
+          </div>
+          <div>
+            <a href="" class="forgotpassword">forgot password ?</a>
+          </div>
+          <hr>
+          <div>
+            <p>do you have an account ?</p>
+            <p class="signup" id="signup" onclick="document.getElementById('login-form').style.display='none';
+            document.getElementById('signup-form').style.display='block'">sign up</p>
+          </div>
+    </form>
+    <form action="login.html" method="post" class="signupform" id="signup-form">
+        <div><h1>akhand jyoti book store</h1></div>
+        <div>
+            <input type="text" name="user_id" id="" placeholder="full name" maxlength="40" required>
+        </div>
+        <div>
+            <input type="tel" title="000 000 0000" name="phone number" pattern="[0-9]{10}" id="" placeholder="phone number" maxlength="10" required>
+        </div>
+          <div>
+            <input type="password" name="pass-word" id="pass" placeholder="password" minlength="8" required>
+          </div>
+          <div>
+            <input type="password" name="pass-word" id="conpass" placeholder="confirm-password" minlength="8" required>
+          </div>
+          <div>
+            <button class="loginbtn" id="signup-btn" onclick="pas()">sign up</button>
+          </div>
+          <div>
+            <p>do you have an account ?</p>
+            <p class="signup" id="login" onclick="document.getElementById('login-form').style.display='block';
+            document.getElementById('signup-form').style.display='none'">log in</p>
+          </div>
+    </form>
+    
+<script src="login.js"></script>
+</body>
+</html>
